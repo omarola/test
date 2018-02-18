@@ -1,0 +1,12 @@
+listAll:
+    path:      /category/list
+    methods: [GET]
+    defaults:  { _controller: AppBundle:Catalog:listAll }
+listById:
+    path:      /category/{id}
+    methods: [GET]
+    defaults:  { _controller: AppBundle:Catalog:listById }
+post:
+    path:      /category
+    methods: [POST]
+    defaults:  { _controller: AppBundle:Catalog:post }
