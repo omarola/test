@@ -4,6 +4,8 @@ AppBundle\Entity\Category:
         children:
             targetEntity: AppBundle\Entity\Category
             mappedBy: parent
+            orderBy:
+                name: ASC
   manyToOne:
       parent:
           targetEntity: AppBundle\Entity\Category
