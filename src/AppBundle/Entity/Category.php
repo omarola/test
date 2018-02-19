@@ -24,6 +24,24 @@ class Category
     private $parent;
 
     /**
+     * @return ArrayCollection
+     */
+    public function getChildren()
+    {
+        return $this->children;
+    }
+
+    /**
+     * @var ArrayCollection
+     */
+    private $children;
+
+    public function __construct()
+    {
+        $this->children = new ArrayCollection();
+    }
+
+    /**
      * @return int
      */
     public function getId()

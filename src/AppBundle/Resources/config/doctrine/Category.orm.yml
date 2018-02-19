@@ -1,11 +1,16 @@
 AppBundle\Entity\Category:
   type: entity
+  oneToMany:
+        children:
+            targetEntity: AppBundle\Entity\Category
+            mappedBy: parent
   manyToOne:
       parent:
           targetEntity: AppBundle\Entity\Category
-          inversedBy: name
+          inversedBy: children
           joinColumn:
               name: parentId
+              type: integer
               referencedColumn: id
   table: category
   repositoryClass: AppBundle\Repository\CategoryRepository

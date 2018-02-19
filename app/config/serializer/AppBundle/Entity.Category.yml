@@ -1,0 +1,10 @@
+AppBundle/Entity/Category:
+exclusion_policy: ALL
+group: category
+properties:
+    id:
+      expose: true
+    name:
+      expose: true
+    parent:
+      expose: true

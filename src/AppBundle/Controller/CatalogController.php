@@ -18,7 +18,7 @@ class CatalogController extends FOSRestController
     /**
      * @return array|View
      */
-    public function listAllAction()
+    public function getAllAction()
     {
         $result = $this->getDoctrine()->getRepository('AppBundle:Category')->findAll();
         if ($result === NULL) {
@@ -32,10 +32,10 @@ class CatalogController extends FOSRestController
      * @param $id
      * @return View|object
      */
-    public function listByIdAction($id)
+    public function getAction($id)
     {
         $result = $this->getDoctrine()->getRepository('AppBundle:Category')->find($id);
-        if ($result === NULL) {
+        if (!$result instanceof Category) {
 
             return new View("ID: " . $id . " not found", Response::HTTP_NOT_FOUND);
         }
@@ -48,30 +48,30 @@ class CatalogController extends FOSRestController
         $array = [];
         if ($content = $request->getContent()) {
             $array = json_decode($content, true);
+          //  $category = $this->deserialize($content);
         }
 
-        $parentId = $this->getDoctrine()->getRepository('AppBundle:Category')->find($array['parentId']);
+        //$content = $request->getContent();
 
-        $result = new Category();
+        /**
+         * @var Category $content
+         */
+        //$content = $this->deserialize($request->getContent());
 
-        $result->setName($array['name']);
+        /** @var Category $parent */
+        $parent = $this->getDoctrine()->getRepository('AppBundle:Category')->find($array['parentId']);
 
-        $result->setParent($parentId);
+        $category = new Category();
+
+        $category->setName($array['name']);
+
+        $category->setParent($parent);
 
         $em = $this->getDoctrine()->getManager();
-        $em->persist($result);
+        $em->persist($category);
         $em->flush();
 
-        return new View("Category Added Successfully", Response::HTTP_OK);
-
-    }
-
-    /**
-     * @param $data
-     * @return mixed
-     */
-    private function deserialize($data)
-    {
-        return $this->container->get('jms-serializer')->deserialize($data, 'json');
+        return new View($category, Response::HTTP_OK);
+        //return new Response($content);
     }
 }
