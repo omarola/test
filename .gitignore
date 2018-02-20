@@ -15,4 +15,8 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
+<<<<<<< HEAD
 /.idea/*
+=======
+.idea/**
+>>>>>>> 2254dec6863046dda4e987422fd5a2e34e1e6c28
