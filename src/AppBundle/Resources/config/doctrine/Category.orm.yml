@@ -7,13 +7,12 @@ AppBundle\Entity\Category:
             orderBy:
                 name: ASC
   manyToOne:
-      parent:
-          targetEntity: AppBundle\Entity\Category
-          inversedBy: children
-          joinColumn:
-              name: parentId
-              type: integer
-              referencedColumn: id
+        parent:
+            targetEntity: AppBundle\Entity\Category
+            inversedBy: children
+            joinColumn:
+                name: parentId
+                referencedColumn: id
   table: category
   repositoryClass: AppBundle\Repository\CategoryRepository
   id:

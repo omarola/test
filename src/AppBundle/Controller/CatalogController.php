@@ -3,17 +3,13 @@
 namespace AppBundle\Controller;
 
 use JMS\Serializer\Serializer;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use AppBundle\Entity\Category;
 use FOS\RestBundle\View\View;
-use FOS\RestBundle\Controller\FOSRestController;
-use Doctrine\Common\Collections\ArrayCollection;
 
-class CatalogController extends FOSRestController
+class CatalogController extends Controller
 {
     /**
      * @return array|View
@@ -46,41 +42,19 @@ class CatalogController extends FOSRestController
 
     /**
      * @param Request $request
-     * @return View
+     * @return View|Response
      */
     public function postAction(Request $request)
     {
-        $array = [];
+        $content = $request->getContent();
 
-        if($content = $request->getContent()) {
+        $category = $this->get('jms_serializer')->deserialize($content,'AppBundle\Entity\Category','json');
 
-            $array = json_decode($content, true);
-
-        }
-
-        if(!$this->checkLength($array['name'])) {
-
-            return new View("NAME LENGHT MUST BE >4",Response::HTTP_CONFLICT);
-
-        } else {
-
-            /**
-             * @var Category $parent
-             */
-            $parent = $this->getDoctrine()->getRepository('AppBundle:Category')->find($array['parentId']);
-
-            $category = new Category();
-
-            $category->setName($array['name']);
-
-            $category->setParent($parent);
-
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($category);
-            $em->flush();
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($category);
+        $em->flush();
 
             return new View($category, Response::HTTP_OK);
-        }
     }
 
     /**
