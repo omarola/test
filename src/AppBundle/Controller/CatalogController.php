@@ -16,6 +16,7 @@ class CatalogController extends Controller
      */
     public function getAllAction()
     {
+
         $result = $this->getDoctrine()->getRepository('AppBundle:Category')->findAll();
 
         if ($result === NULL) {
@@ -50,23 +51,17 @@ class CatalogController extends Controller
 
         $category = $this->get('jms_serializer')->deserialize($content,'AppBundle\Entity\Category','json');
 
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($category);
-        $em->flush();
+        $errors = $this->get('validator')->validate($category);
+
+        if (count($errors) > 0) {
+            return new View("NAME LENGTH MUST BE >4",Response::HTTP_BAD_REQUEST);
+        } else {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($category);
+            $em->flush();
 
             return new View($category, Response::HTTP_OK);
+        }
     }
 
-    /**
-     * @param $data
-     * @param int $min
-     * @return bool
-     */
-    private function checkLength($data, $min = 4)
-    {
-        if(mb_strlen($data)<$min) {
-            return false;
-        } else
-            return true;
-    }
 }
