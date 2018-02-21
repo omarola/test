@@ -1,10 +1,8 @@
 AppBundle/Entity/Category:
-exclusion_policy: ALL
-group: category
 properties:
     id:
-      expose: true
+      type: integer
     name:
-      expose: true
+      type: string
     parent:
-      expose: true
+      type: Category

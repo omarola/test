@@ -1,0 +1,6 @@
+AppBundle\Entity\Category:
+    properties:
+        name:
+            - Length:
+                min: 4
+                minMessage: 'Your first name must be at least {{ limit }} characters long'

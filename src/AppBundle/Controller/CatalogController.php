@@ -3,24 +3,23 @@
 namespace AppBundle\Controller;
 
 use JMS\Serializer\Serializer;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use AppBundle\Entity\Category;
 use FOS\RestBundle\View\View;
-use FOS\RestBundle\Controller\FOSRestController;
-use Doctrine\Common\Collections\ArrayCollection;
 
-class CatalogController extends FOSRestController
+class CatalogController extends Controller
 {
     /**
-     * @return array|View
+     * @param Request $request
+     * @return View
      */
-    public function getAllAction()
+    public function getAllAction(Request $request)
     {
-        $result = $this->getDoctrine()->getRepository('AppBundle:Category')->findAll();
+        $name = $request->query->get('name');
+
+        $result = $this->getDoctrine()->getRepository('AppBundle:Category')->findBy(array('name' => $name));
 
         if ($result === NULL) {
 
@@ -46,35 +45,19 @@ class CatalogController extends FOSRestController
 
     /**
      * @param Request $request
-     * @return View
+     * @return View|Response
      */
     public function postAction(Request $request)
     {
-        $array = [];
+        $content = $request->getContent();
 
-        if($content = $request->getContent()) {
+        $category = $this->get('jms_serializer')->deserialize($content,'AppBundle\Entity\Category','json');
 
-            $array = json_decode($content, true);
+        $errors = $this->get('validator')->validate($category);
 
-        }
-
-        if(!$this->checkLength($array['name'])) {
-
-            return new View("NAME LENGHT MUST BE >4",Response::HTTP_CONFLICT);
-
+        if (count($errors) > 0) {
+            return new View("NAME LENGTH MUST BE >4",Response::HTTP_BAD_REQUEST);
         } else {
-
-            /**
-             * @var Category $parent
-             */
-            $parent = $this->getDoctrine()->getRepository('AppBundle:Category')->find($array['parentId']);
-
-            $category = new Category();
-
-            $category->setName($array['name']);
-
-            $category->setParent($parent);
-
             $em = $this->getDoctrine()->getManager();
             $em->persist($category);
             $em->flush();
@@ -83,16 +66,4 @@ class CatalogController extends FOSRestController
         }
     }
 
-    /**
-     * @param $data
-     * @param int $min
-     * @return bool
-     */
-    private function checkLength($data, $min = 4)
-    {
-        if(mb_strlen($data)<$min) {
-            return false;
-        } else
-            return true;
-    }
 }

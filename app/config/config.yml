@@ -9,6 +9,7 @@ parameters:
     locale: en
 
 framework:
+    #templating: { engines: ['twig'] }
     #esi: ~
     #translator: { fallbacks: ['%locale%'] }
     secret: '%secret%'
@@ -17,7 +18,7 @@ framework:
         strict_requirements: ~
     form: ~
     csrf_protection: ~
-    validation: { enable_annotations: true }
+    validation: { enabled: true }
     #serializer: { enable_annotations: true }
     default_locale: '%locale%'
     trusted_hosts: ~
@@ -69,20 +70,10 @@ swiftmailer:
 fos_rest:
     body_listener: true
     format_listener:
-        rules:
-            - { path: '^/', priorities: ['json'], fallback_format: json, prefer_extension: false }
+       rules:
+          - { path: '^/', priorities: ['json'], fallback_format: json, prefer_extension: false }
     param_fetcher_listener: true
     view:
         view_response_listener: 'force'
         formats:
             json: true
-web_profiler:
-    toolbar:              true
-    intercept_redirects:  true
-    excluded_ajax_paths:  ^/(app(_[\\w]+)?\\.php/)?_wdt
-
-    # DEPRECATED, it can be removed safely from your configuration
-    position:             bottom
-
-    # DEPRECATED, it can be removed safely from your configuration
-    verbose:              true
