@@ -7,7 +7,11 @@ if (PHP_VERSION_ID < 70000) {
     include_once __DIR__.'/../var/bootstrap.php.cache';
 }
 
+<<<<<<< HEAD
+$kernel = new AppKernel('dev', true);
+=======
 $kernel = new AppKernel('prod', false);
+>>>>>>> 6f43f87f570938b3176565254b0d6b27a414357e
 if (PHP_VERSION_ID < 70000) {
     $kernel->loadClassCache();
 }

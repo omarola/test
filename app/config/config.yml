@@ -76,3 +76,13 @@ fos_rest:
         view_response_listener: 'force'
         formats:
             json: true
+web_profiler:
+    toolbar:              true
+    intercept_redirects:  true
+    excluded_ajax_paths:  ^/(app(_[\\w]+)?\\.php/)?_wdt
+
+    # DEPRECATED, it can be removed safely from your configuration
+    position:             bottom
+
+    # DEPRECATED, it can be removed safely from your configuration
+    verbose:              true

@@ -21,11 +21,12 @@ class CatalogController extends FOSRestController
     public function getAllAction()
     {
         $result = $this->getDoctrine()->getRepository('AppBundle:Category')->findAll();
+
         if ($result === NULL) {
 
             return new View("Catalog not found", Response::HTTP_NOT_FOUND);
         }
-        return new View($result);
+        return new View($result,Response::HTTP_OK);
     }
 
     /**
@@ -40,38 +41,58 @@ class CatalogController extends FOSRestController
             return new View("ID: " . $id . " not found", Response::HTTP_NOT_FOUND);
         }
 
-        return new View($result);
+        return new View($result, Response::HTTP_OK);
     }
 
+    /**
+     * @param Request $request
+     * @return View
+     */
     public function postAction(Request $request)
     {
         $array = [];
-        if ($content = $request->getContent()) {
+
+        if($content = $request->getContent()) {
+
             $array = json_decode($content, true);
-          //  $category = $this->deserialize($content);
+
         }
 
-        //$content = $request->getContent();
+        if(!$this->checkLength($array['name'])) {
 
-        /**
-         * @var Category $content
-         */
-        //$content = $this->deserialize($request->getContent());
+            return new View("NAME LENGHT MUST BE >4",Response::HTTP_CONFLICT);
 
-        /** @var Category $parent */
-        $parent = $this->getDoctrine()->getRepository('AppBundle:Category')->find($array['parentId']);
+        } else {
 
-        $category = new Category();
+            /**
+             * @var Category $parent
+             */
+            $parent = $this->getDoctrine()->getRepository('AppBundle:Category')->find($array['parentId']);
 
-        $category->setName($array['name']);
+            $category = new Category();
 
-        $category->setParent($parent);
+            $category->setName($array['name']);
 
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($category);
-        $em->flush();
+            $category->setParent($parent);
 
-        return new View($category, Response::HTTP_OK);
-        //return new Response($content);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($category);
+            $em->flush();
+
+            return new View($category, Response::HTTP_OK);
+        }
+    }
+
+    /**
+     * @param $data
+     * @param int $min
+     * @return bool
+     */
+    private function checkLength($data, $min = 4)
+    {
+        if(mb_strlen($data)<$min) {
+            return false;
+        } else
+            return true;
     }
 }
