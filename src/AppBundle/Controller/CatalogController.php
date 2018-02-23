@@ -48,21 +48,24 @@ class CatalogController extends Controller
      */
     public function postAction(Request $request)
     {
+        $serializer = $this->get('jms_serializer');
+
         $content = $request->getContent();
 
-        $category = $this->get('jms_serializer')->deserialize($content,'AppBundle\Entity\Category','json');
+        $category = $serializer->deserialize($content,'AppBundle\Entity\Category','json');
 
-        $errors = $this->get('validator')->validate($category);
-
-        if (count($errors) > 0) {
-            return new View("NAME LENGTH MUST BE >4",Response::HTTP_BAD_REQUEST);
-        } else {
+//        $errors = $this->get('validator')->validate($category);
+//
+//        if (count($errors) > 0) {
+//            return new View("NAME LENGTH MUST BE >4",Response::HTTP_BAD_REQUEST);
+//        } else {
+//
             $em = $this->getDoctrine()->getManager();
             $em->persist($category);
             $em->flush();
 
             return new View($category, Response::HTTP_OK);
         }
-    }
+    //}
 
 }

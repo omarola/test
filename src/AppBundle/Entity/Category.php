@@ -4,9 +4,6 @@ namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 
-/**
- * Category
- */
 class Category
 {
     /**

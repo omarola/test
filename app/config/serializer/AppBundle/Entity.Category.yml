@@ -1,8 +1,21 @@
-AppBundle/Entity/Category:
-properties:
-    id:
-      type: integer
-    name:
-      type: string
-    parent:
-      type: Category
+AppBundle\Entity\Category:
+    exclusion_policy: ALL
+    properties:
+        id:
+          type: integer
+          groups: [get]
+        name:
+          access_type: public_method
+          expose: true
+          type: string
+          groups: [get, set]
+        parent:
+            type: AppBundle\Entity\Category
+            access_type: public_method
+            accessor:
+                getter: getParent
+                setter: setParent
+            groups: [get, set]
+        children:
+          expose: false
+          groups: [get]
