@@ -17,5 +17,5 @@ AppBundle\Entity\Category:
                 setter: setParent
             groups: [get, set]
         children:
-          expose: false
+          expose: true
           groups: [get]

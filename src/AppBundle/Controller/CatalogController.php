@@ -61,8 +61,7 @@ class CatalogController extends Controller
         } else {
 
             $em = $this->getDoctrine()->getManager();
-            $em->merge($category);
-            //$em->persist($category);
+            $em->persist($category);
             $em->flush();
 
             return new View($category, Response::HTTP_OK);

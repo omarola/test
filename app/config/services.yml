@@ -28,7 +28,8 @@ services:
         resource: '../../src/AppBundle/Controller'
         public: true
         tags: ['controller.service_arguments']
-
+    jms_serializer.object_constructor:
+            alias: jms_serializer.doctrine_object_constructor
     # add more services, or override services that need manual wiring
     # AppBundle\Service\ExampleService:
     #     arguments:
