@@ -11,12 +11,14 @@ use FOS\RestBundle\View\View;
 class CatalogController extends Controller
 {
     /**
-     * @return array|View
+     * @param Request $request
+     * @return View
      */
-    public function getAllAction()
+    public function getAllAction(Request $request)
     {
+        $name = $request->query->get('name');
 
-        $result = $this->getDoctrine()->getRepository('AppBundle:Category')->findAll();
+        $result = $this->getDoctrine()->getRepository('AppBundle:Category')->findBy(array('name' => $name));
 
         if ($result === NULL) {
 

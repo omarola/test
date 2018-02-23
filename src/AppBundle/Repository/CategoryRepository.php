@@ -10,8 +10,8 @@ namespace AppBundle\Repository;
  */
 class CategoryRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function getAllByName($name)
+    public function findByName($name)
     {
-        return  $this->getEntityManager()->createQuery('SELECT * FROM AppBundle\Repository\CategoryRepository WHERE p.name LIKE '.$name);
+        return  $this->getEntityManager()->createQuery('SELECT * FROM AppBundle\\Entity\\Category WHERE name = "$name"')->getResult ();
     }
 }
