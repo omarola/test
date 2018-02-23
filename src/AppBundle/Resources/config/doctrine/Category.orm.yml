@@ -4,6 +4,7 @@ AppBundle\Entity\Category:
         children:
             targetEntity: AppBundle\Entity\Category
             mappedBy: parent
+            cascade: ["all"]
             orderBy:
                 name: ASC
   manyToOne:
@@ -20,6 +21,7 @@ AppBundle\Entity\Category:
           column: id
           type: integer
           id: true
+          generator:
           generator:
               strategy: AUTO
   fields:
