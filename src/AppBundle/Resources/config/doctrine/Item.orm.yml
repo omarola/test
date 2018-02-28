@@ -1,0 +1,33 @@
+AppBundle\Entity\Item:
+    type: entity
+    manyToOne:
+        category:
+            targetEntity: AppBundle\Entity\Category
+            inversedBy: items
+            joinColumn:
+                name: category_id
+                referencedColumn: id
+    table: items
+    repositoryClass: AppBundle\Repository\ItemRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        price:
+            type: integer
+        color:
+            type: string
+            length: 255
+            nullable: true
+        size:
+            type: integer
+        weight:
+            type: integer
+
+
