@@ -1,0 +1,38 @@
+AppBundle\Entity\Item:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: integer
+            groups: [get]
+        name:
+            access_type: public_method
+            expose: true
+            type: string
+            groups: [get, set]
+        price:
+            access_type: public_method
+            expose: true
+            type: integer
+            groups: [get, set]
+        color:
+            access_type: public_method
+            expose: true
+            type: string
+            groups: [get, set]
+        size:
+            access_type: public_method
+            expose: true
+            type: integer
+            groups: [get, set]
+        weight:
+            access_type: public_method
+            expose: true
+            type: integer
+            groups: [get, set]
+        category:
+            type: AppBundle\Entity\Item
+            access_type: public_method
+            accessor:
+                getter: getCategory
+                setter: setCategory
+            groups: [get, set]

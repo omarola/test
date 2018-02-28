@@ -4,14 +4,15 @@ AppBundle\Entity\Category:
         children:
             targetEntity: AppBundle\Entity\Category
             mappedBy: parent
-            #cascade: ['persist']
-            orderBy:
-                name: ASC
+            #orderBy:
+                #name: ASC
+        items:
+            targetEntity: AppBundle\Entity\Item
+            mappedBy: category
   manyToOne:
         parent:
             targetEntity: AppBundle\Entity\Category
             inversedBy: children
-            #cascade: ['all']
             joinColumn:
                 name: parentId
                 referencedColumn: id

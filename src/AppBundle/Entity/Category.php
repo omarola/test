@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 class Category
 {
@@ -21,21 +22,37 @@ class Category
     private $parent;
 
     /**
+     * @var ArrayCollection
+     */
+    private $children;
+
+    /**
+     * @var Collection of Item
+     */
+    protected $items;
+
+    public function __construct()
+    {
+        $this->children = new ArrayCollection();
+        $this->items = new ArrayCollection();
+    }
+
+    public function getItems()
+    {
+        return $this->items;
+    }
+
+    public function setItems(Collection $items)
+    {
+        $this->items = $items;
+    }
+
+    /**
      * @return ArrayCollection
      */
     public function getChildren()
     {
         return $this->children;
-    }
-
-    /**
-     * @var ArrayCollection
-     */
-    private $children;
-
-    public function __construct()
-    {
-        $this->children = new ArrayCollection();
     }
 
     /**

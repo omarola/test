@@ -14,7 +14,7 @@ class CatalogController extends Controller
      * @param Request $request
      * @return View
      */
-    public function getAllAction(Request $request)
+    public function getAllCategoryAction(Request $request)
     {
         $name = $request->query->get('name');
 
@@ -23,15 +23,15 @@ class CatalogController extends Controller
         if ($result === NULL) {
 
             return new View("Catalog not found", Response::HTTP_NOT_FOUND);
-        }
-        return new View($result,Response::HTTP_OK);
+        } else
+            return new View($result,Response::HTTP_OK);
     }
 
     /**
      * @param $id
      * @return View|object
      */
-    public function getAction($id)
+    public function getCategoryAction($id)
     {
         $result = $this->getDoctrine()->getRepository('AppBundle:Category')->find($id);
         if (!$result instanceof Category) {
@@ -46,7 +46,7 @@ class CatalogController extends Controller
      * @param Request $request
      * @return View|Response
      */
-    public function postAction(Request $request)
+    public function postCategoryAction(Request $request)
     {
         $serializer = $this->get('jms_serializer');
 
@@ -68,4 +68,25 @@ class CatalogController extends Controller
         }
     }
 
+    public function getAllItemAction()
+    {
+        $content = $this->getDoctrine()->getRepository('AppBundle:Item')->findAll();
+        if ($content === NULL) {
+
+            return new View("Items not found", Response::HTTP_NOT_FOUND);
+        } else
+            return new View($content,Response::HTTP_OK);
+    }
+
+    public function getItemAction(Request $request)
+    {
+
+        return new View("",Response::HTTP_OK);
+    }
+
+    public function postItemAction(Request $request)
+    {
+
+        return new View("",Response::HTTP_OK);
+    }
 }
