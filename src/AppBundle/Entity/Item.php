@@ -2,6 +2,10 @@
 
 namespace AppBundle\Entity;
 
+use AppBundle\AppBundle;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+
 class Item
 {
     /**
@@ -35,23 +39,27 @@ class Item
     private $weight;
 
     /**
-     * @var Category
+     * @var Collection of Category
      */
-    protected $category;
+    protected $categories;
 
-    /**
-     * @param Category $category
-     */
-    public function setCategory(Category $category) {
-        $this->category = $category;
+    public function __construct()
+    {
+        //$this->categories = new ArrayCollection();
     }
 
     /**
-     * @return Category
+     * @return ArrayCollection|Collection
      */
-    public function getCategory() {
-        return $this->category;
+    public function getCategories() {
+        return $this->categories;
     }
+
+    public function setCategories(Collection $categories)
+    {
+            $this->categories = $categories;
+    }
+
 
     /**
      * Get id

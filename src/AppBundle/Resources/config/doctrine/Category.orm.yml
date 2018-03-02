@@ -6,9 +6,6 @@ AppBundle\Entity\Category:
             mappedBy: parent
             #orderBy:
                 #name: ASC
-        items:
-            targetEntity: AppBundle\Entity\Item
-            mappedBy: category
   manyToOne:
         parent:
             targetEntity: AppBundle\Entity\Category
@@ -16,6 +13,11 @@ AppBundle\Entity\Category:
             joinColumn:
                 name: parentId
                 referencedColumn: id
+  manyToMany:
+        items:
+            targetEntity: AppBundle\Entity\Item
+            mappedBy: categories
+            cascade: ['persist']
   table: category
   repositoryClass: AppBundle\Repository\CategoryRepository
   id:
@@ -23,7 +25,6 @@ AppBundle\Entity\Category:
           column: id
           type: integer
           id: true
-          generator:
           generator:
               strategy: AUTO
   fields:

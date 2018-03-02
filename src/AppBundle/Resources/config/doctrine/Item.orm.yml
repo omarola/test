@@ -1,12 +1,18 @@
 AppBundle\Entity\Item:
     type: entity
-    manyToOne:
-        category:
+    manyToMany:
+        categories:
             targetEntity: AppBundle\Entity\Category
+            cascade: ['persist']
             inversedBy: items
-            joinColumn:
-                name: category_id
-                referencedColumn: id
+            joinTable:
+                name: item_category
+                joinColumns:
+                    item_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    category_id:
+                        referencedColumnName: id
     table: items
     repositoryClass: AppBundle\Repository\ItemRepository
     id:
@@ -29,5 +35,4 @@ AppBundle\Entity\Item:
             type: integer
         weight:
             type: integer
-
 

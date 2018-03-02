@@ -3,36 +3,37 @@ AppBundle\Entity\Item:
     properties:
         id:
             type: integer
-            groups: [get]
+            groups: [getItem]
         name:
             access_type: public_method
             expose: true
             type: string
-            groups: [get, set]
+            groups: [getItem, setItem]
         price:
             access_type: public_method
             expose: true
             type: integer
-            groups: [get, set]
+            groups: [getItem, setItem]
         color:
             access_type: public_method
             expose: true
             type: string
-            groups: [get, set]
+            groups: [getItem, setItem]
         size:
             access_type: public_method
             expose: true
             type: integer
-            groups: [get, set]
+            groups: [getItem, setItem]
         weight:
             access_type: public_method
             expose: true
             type: integer
-            groups: [get, set]
-        category:
-            type: AppBundle\Entity\Item
+            groups: [getItem, setItem]
+        categories:
+            type: ArrayCollection<AppBundle\Entity\Category>
+            expose: true
             access_type: public_method
             accessor:
-                getter: getCategory
-                setter: setCategory
-            groups: [get, set]
+                getter: getCategories
+                setter: setCategories
+            groups: [getItem, setItem]

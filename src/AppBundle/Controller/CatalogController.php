@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Item;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -68,6 +69,9 @@ class CatalogController extends Controller
         }
     }
 
+    /**
+     * @return View
+     */
     public function getAllItemAction()
     {
         $content = $this->getDoctrine()->getRepository('AppBundle:Item')->findAll();
@@ -78,15 +82,33 @@ class CatalogController extends Controller
             return new View($content,Response::HTTP_OK);
     }
 
-    public function getItemAction(Request $request)
+    /**
+     * @param $id
+     * @return View
+     */
+    public function getItemAction($id)
     {
+            $content = $this->getDoctrine()->getRepository('AppBundle:Item')->find($id);
+            if (!$content instanceof Item) {
 
-        return new View("",Response::HTTP_OK);
+                return new View("ID: " . $id . " not found. This item does not exist", Response::HTTP_NOT_FOUND);
+            }
+        return new View($content,Response::HTTP_OK);
     }
+
 
     public function postItemAction(Request $request)
     {
+        $serializer = $this->get('jms_serializer');
 
-        return new View("",Response::HTTP_OK);
+        $content = $request->getContent();
+
+        $item = $serializer->deserialize($content,'AppBundle\Entity\Item','json');
+        //var_dump($item);
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($item);
+            $em->flush();
+        return new View($item,Response::HTTP_OK);
     }
 }

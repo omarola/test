@@ -12,10 +12,7 @@ AppBundle\Entity\Category:
         parent:
             type: AppBundle\Entity\Category
             access_type: public_method
-            accessor:
-                getter: getParent
-                setter: setParent
             groups: [get, set]
         children:
-          expose: true
+          expose: false
           groups: [get]
