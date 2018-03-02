@@ -72,7 +72,7 @@ class CatalogController extends Controller
     /**
      * @return View
      */
-    public function getAllItemAction()
+    public function getAllItemsAction()
     {
         $content = $this->getDoctrine()->getRepository('AppBundle:Item')->findAll();
         if ($content === NULL) {
@@ -97,6 +97,10 @@ class CatalogController extends Controller
     }
 
 
+    /**
+     * @param Request $request
+     * @return View
+     */
     public function postItemAction(Request $request)
     {
         $serializer = $this->get('jms_serializer');
@@ -104,11 +108,11 @@ class CatalogController extends Controller
         $content = $request->getContent();
 
         $item = $serializer->deserialize($content,'AppBundle\Entity\Item','json');
-        //var_dump($item);
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($item);
-            $em->flush();
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($item);
+        $em->flush();
+
         return new View($item,Response::HTTP_OK);
     }
 }

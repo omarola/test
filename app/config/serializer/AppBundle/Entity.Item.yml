@@ -33,7 +33,4 @@ AppBundle\Entity\Item:
             type: ArrayCollection<AppBundle\Entity\Category>
             expose: true
             access_type: public_method
-            accessor:
-                getter: getCategories
-                setter: setCategories
             groups: [getItem, setItem]

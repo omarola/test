@@ -31,17 +31,26 @@ class Category
      */
     protected $items;
 
+    /**
+     * Category constructor.
+     */
     public function __construct()
     {
         $this->children = new ArrayCollection();
         $this->items = new ArrayCollection();
     }
 
+    /**
+     * @return ArrayCollection|Collection
+     */
     public function getItems()
     {
         return $this->items;
     }
 
+    /**
+     * @param Collection $items
+     */
     public function setItems(Collection $items)
     {
         $this->items = $items;

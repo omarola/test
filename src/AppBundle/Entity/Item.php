@@ -2,7 +2,6 @@
 
 namespace AppBundle\Entity;
 
-use AppBundle\AppBundle;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
@@ -45,7 +44,7 @@ class Item
 
     public function __construct()
     {
-        //$this->categories = new ArrayCollection();
+        $this->categories = new ArrayCollection();
     }
 
     /**
@@ -55,6 +54,9 @@ class Item
         return $this->categories;
     }
 
+    /**
+     * @param Collection $categories
+     */
     public function setCategories(Collection $categories)
     {
             $this->categories = $categories;

@@ -13,12 +13,12 @@ postCategory:
 getAllItem:
     path: /items
     methods: [GET]
-    defaults: { _controller: AppBundle:Catalog:getAllItem}
+    defaults: { _controller: AppBundle:Catalog:getAllItems}
 getItem:
-    path: /items/{id}
+    path: /item/{id}
     methods: [GET]
     defaults: { _controller: AppBundle:Catalog:getItem}
 postItem:
-    path: /items
+    path: /item
     methods: [POST]
     defaults: { _controller: AppBundle:Catalog:postItem}
