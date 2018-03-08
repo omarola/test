@@ -1,0 +1,21 @@
+AppBundle\Entity\AttrValue:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: integer
+            groups: [get]
+        attribute:
+            access_type: public_method
+            expose: true
+            #type: int
+            groups: [get, set]
+        item:
+            access_type: public_method
+            expose: true
+            #type: int
+            groups: [get, set]
+        value:
+            access_type: public_method
+            expose: true
+            type: string
+            groups: [get, set]

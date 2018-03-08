@@ -18,33 +18,21 @@ class Item
     private $name;
 
     /**
-     * @var int
-     */
-    private $price;
-
-    /**
-     * @var string
-     */
-    private $color;
-
-    /**
-     * @var integer
-     */
-    private $size;
-
-    /**
-     * @var integer
-     */
-    private $weight;
-
-    /**
      * @var Collection of Category
      */
     protected $categories;
 
+    /**
+     * @var
+     */
+    protected $itemValues;
+    /**
+     * Item constructor.
+     */
     public function __construct()
     {
         $this->categories = new ArrayCollection();
+        $this->itemValues = new ArrayCollection();
     }
 
     /**
@@ -61,7 +49,6 @@ class Item
     {
             $this->categories = $categories;
     }
-
 
     /**
      * Get id
@@ -98,99 +85,20 @@ class Item
     }
 
     /**
-     * Set price
-     *
-     * @param integer $price
-     *
-     * @return Item
+     * @return Collection
      */
-    public function setPrice($price)
+    public function getItemValues()
     {
-        $this->price = $price;
-
-        return $this;
+        return $this->itemValues;
     }
 
     /**
-     * Get price
-     *
-     * @return int
+     * @param Collection $itemValues
      */
-    public function getPrice()
+    public function setItemValues(Collection $itemValues)
     {
-        return $this->price;
+        $this->itemValues = $itemValues;
     }
 
-    /**
-     * Set color
-     *
-     * @param string $color
-     *
-     * @return Item
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-
-        return $this;
-    }
-
-    /**
-     * Get color
-     *
-     * @return string
-     */
-    public function getColor()
-    {
-        return $this->color;
-    }
-
-    /**
-     * Set size
-     *
-     * @param string $size
-     *
-     * @return Item
-     */
-    public function setSize($size)
-    {
-        $this->size = $size;
-
-        return $this;
-    }
-
-    /**
-     * Get size
-     *
-     * @return string
-     */
-    public function getSize()
-    {
-        return $this->size;
-    }
-
-    /**
-     * Set weight
-     *
-     * @param string $weight
-     *
-     * @return Item
-     */
-    public function setWeight($weight)
-    {
-        $this->weight = $weight;
-
-        return $this;
-    }
-
-    /**
-     * Get weight
-     *
-     * @return string
-     */
-    public function getWeight()
-    {
-        return $this->weight;
-    }
 }
 

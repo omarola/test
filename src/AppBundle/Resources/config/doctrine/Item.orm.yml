@@ -13,6 +13,10 @@ AppBundle\Entity\Item:
                 inverseJoinColumns:
                     category_id:
                         referencedColumnName: id
+    oneToMany:
+        itemValues:
+            targetEntity: AppBundle\Entity\AttrValue
+            mappedBy: item
     table: items
     repositoryClass: AppBundle\Repository\ItemRepository
     id:
@@ -25,14 +29,5 @@ AppBundle\Entity\Item:
         name:
             type: string
             length: 255
-        price:
-            type: integer
-        color:
-            type: string
-            length: 255
-            nullable: true
-        size:
-            type: integer
-        weight:
-            type: integer
+
 

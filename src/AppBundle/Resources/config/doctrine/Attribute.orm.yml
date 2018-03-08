@@ -1,0 +1,21 @@
+AppBundle\Entity\Attribute:
+    type: entity
+    oneToMany:
+            attrValues:
+                targetEntity: AppBundle\Entity\AttrValue
+                mappedBy: attribute
+    table: attribute
+    repositoryClass: AppBundle\Repository\AttributeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        alias:
+            type: string
+            length: 255
+        name:
+            type: string
+            length: 255

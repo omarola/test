@@ -1,0 +1,25 @@
+AppBundle\Entity\AttrValue:
+    type: entity
+    manyToOne:
+        item:
+            targetEntity: AppBundle\Entity\Item
+            inversedBy: itemValues
+            joinColumn:
+                nullable: true
+        attribute:
+            targetEntity: AppBundle\Entity\Attribute
+            inversedBy: attrValues
+            joinColumn:
+                nullable: true
+    table: null
+    repositoryClass: AppBundle\Repository\AttrValueRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        value:
+            type: string
+            length: 255
