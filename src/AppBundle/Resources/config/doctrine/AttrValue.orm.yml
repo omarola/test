@@ -4,11 +4,13 @@ AppBundle\Entity\AttrValue:
         item:
             targetEntity: AppBundle\Entity\Item
             inversedBy: attributes
+            cascade: ['persist']
             joinColumn:
                 nullable: true
         attribute:
             targetEntity: AppBundle\Entity\Attribute
             inversedBy: attrValues
+            cascade: ['persist']
             joinColumn:
                 nullable: true
     table: null

@@ -17,6 +17,7 @@ AppBundle\Entity\Item:
         attributes:
             targetEntity: AppBundle\Entity\AttrValue
             mappedBy: item
+            cascade: ['persist']
     table: items
     repositoryClass: AppBundle\Repository\ItemRepository
     id:
