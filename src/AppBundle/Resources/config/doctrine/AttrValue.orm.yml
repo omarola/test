@@ -3,7 +3,7 @@ AppBundle\Entity\AttrValue:
     manyToOne:
         item:
             targetEntity: AppBundle\Entity\Item
-            inversedBy: itemValues
+            inversedBy: attributes
             joinColumn:
                 nullable: true
         attribute:

@@ -93,7 +93,7 @@ class Item
     }
 
     /**
-     * @param Collection $itemValues
+     * @param Collection $attributes
      */
     public function setAttributes(Collection $attributes)
     {

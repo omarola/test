@@ -16,6 +16,6 @@ AppBundle\Entity\Attribute:
             groups: [get, set]
         attrValues:
             access_type: public_method
-            expose: true
+            expose: false
             #type: string
             groups: [get, set]
