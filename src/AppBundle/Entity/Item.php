@@ -25,14 +25,14 @@ class Item
     /**
      * @var
      */
-    protected $itemValues;
+    protected $attributes;
     /**
      * Item constructor.
      */
     public function __construct()
     {
         $this->categories = new ArrayCollection();
-        $this->itemValues = new ArrayCollection();
+        $this->attributes = new ArrayCollection();
     }
 
     /**
@@ -87,17 +87,17 @@ class Item
     /**
      * @return Collection
      */
-    public function getItemValues()
+    public function getAttributes()
     {
-        return $this->itemValues;
+        return $this->attributes;
     }
 
     /**
      * @param Collection $itemValues
      */
-    public function setItemValues(Collection $itemValues)
+    public function setAttributes(Collection $attributes)
     {
-        $this->itemValues = $itemValues;
+        $this->attributes = $attributes;
     }
 
 }

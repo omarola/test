@@ -14,7 +14,7 @@ AppBundle\Entity\Item:
                     category_id:
                         referencedColumnName: id
     oneToMany:
-        itemValues:
+        attributes:
             targetEntity: AppBundle\Entity\AttrValue
             mappedBy: item
     table: items

@@ -14,7 +14,7 @@ AppBundle\Entity\Item:
             expose: true
             access_type: public_method
             groups: [getItem, setItem]
-        itemValues:
+        attributes:
             #type: AppBundle\Entity\Attribute
             expose: true
             groups: [getItem, setItem]
