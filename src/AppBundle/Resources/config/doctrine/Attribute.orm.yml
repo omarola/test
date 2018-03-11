@@ -4,7 +4,7 @@ AppBundle\Entity\Attribute:
             attrValues:
                 targetEntity: AppBundle\Entity\AttrValue
                 mappedBy: attribute
-                cascade: ['persist']
+                cascade: ['persist','remove']
     table: attribute
     repositoryClass: AppBundle\Repository\AttributeRepository
     id:

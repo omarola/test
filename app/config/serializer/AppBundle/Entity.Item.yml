@@ -15,6 +15,6 @@ AppBundle\Entity\Item:
             access_type: public_method
             groups: [getItem, setItem]
         attributes:
-            #type: AppBundle\Entity\Attribute
+            type: ArrayCollection<AppBundle\Entity\AttrValue>
             expose: true
             groups: [getItem, setItem]

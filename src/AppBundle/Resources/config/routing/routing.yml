@@ -1,15 +1,24 @@
 getAllCategory:
     path:      /category
     methods: [GET]
-    defaults:  { _controller: AppBundle:Catalog:getAllCategory }
+    defaults:  { _controller: AppBundle:Catalog:getAllCategory}
 getCategory:
     path:      /category/{id}
     methods: [GET]
-    defaults:  { _controller: AppBundle:Catalog:getCategory }
+    defaults:  { _controller: AppBundle:Catalog:getCategory}
 postCategory:
     path:      /category
     methods: [POST]
-    defaults:  { _controller: AppBundle:Catalog:postCategory }
+    defaults:  { _controller: AppBundle:Catalog:postCategory}
+updateCategory:
+    path: /category/{id}
+    methods: [PATCH]
+    defaults: { _controller: AppBundle:Catalog:updateCategory}
+deleteCategory:
+    path: /category/{id}
+    methods: [DELETE]
+    defaults: { _controller: AppBundle:Catalog:deleteCategory}
+
 getAllItem:
     path: /items
     methods: [GET]
@@ -22,3 +31,11 @@ postItem:
     path: /item
     methods: [POST]
     defaults: { _controller: AppBundle:Item:postItem}
+updateItem:
+    path: /item/{id}
+    methods: [PATCH]
+    defaults: { _controller: AppBundle:Item:updateItem}
+deleteItem:
+    path: /item/{id}
+    methods: [DELETE]
+    defaults: { _controller: AppBundle:Item:deleteItem}

@@ -67,4 +67,37 @@ class CatalogController extends Controller
 
         return new View($category, Response::HTTP_OK);
     }
+
+    public function updateCategoryAction($id,Request $request)
+    {
+        $serializer = $this->get('jms_serializer');
+
+        $content = $request->getContent();
+
+        $category = $serializer->deserialize($content,Category::class,'json');
+
+        $result = $this->getDoctrine()->getRepository(Category::class)->find($id);
+
+        return new View("updated!",Response::HTTP_OK);
+
+    }
+
+    /**
+     * @param $id
+     * @return View
+     */
+    public function deleteCategoryAction($id)
+    {
+        $category = $this->getDoctrine()->getRepository(Category::class)->find($id);
+
+        if (empty($category)) {
+            return new View("Category not found", Response::HTTP_NOT_FOUND);
+        }
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($category);
+        $em->flush();
+
+        return new View("deleted successfully", Response::HTTP_OK);
+    }
 }

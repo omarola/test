@@ -4,16 +4,20 @@ AppBundle\Entity\AttrValue:
         item:
             targetEntity: AppBundle\Entity\Item
             inversedBy: attributes
-            cascade: ['persist']
+            cascade: ['persist','remove']
             joinColumn:
-                nullable: true
+                name: item_id
+                referencedColumn: id
+                nullable: false
         attribute:
             targetEntity: AppBundle\Entity\Attribute
             inversedBy: attrValues
-            cascade: ['persist']
+            cascade: ['persist','remove']
             joinColumn:
-                nullable: true
-    table: null
+                name: attribute_id
+                referencedColumn: id
+                nullable: false
+    table: attr_value
     repositoryClass: AppBundle\Repository\AttrValueRepository
     id:
         id:

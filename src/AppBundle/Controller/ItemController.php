@@ -57,4 +57,38 @@ class ItemController extends Controller
 
         return new View($item,Response::HTTP_OK);
     }
+
+    public function updateItemAction($id, Request $request)
+    {
+        $serializer = $this->get('jms_serializer');
+
+        $content = $request->getContent();
+
+        $item = $serializer->deserialize($content,Item::class,'json');
+
+        $em = $this->getDoctrine()->getManager();
+        $em->getRepository(Item::class)->findOneById($item);
+        //$em->persist($item);
+        $em->flush();
+        return new View("updated!",Response::HTTP_OK);
+    }
+
+    /**
+     * @param $id
+     * @return View
+     */
+    public function deleteItemAction($id)
+    {
+        $item = $this->getDoctrine()->getRepository(Item::class)->find($id);
+
+        if (empty($item)) {
+            return new View("Item not found", Response::HTTP_NOT_FOUND);
+        }
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($item);
+        $em->flush();
+
+        return new View("Item deleted successfully", Response::HTTP_OK);
+    }
 }

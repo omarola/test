@@ -7,12 +7,12 @@ AppBundle\Entity\AttrValue:
         attribute:
             access_type: public_method
             expose: true
-            #type: int
+            type: AppBundle\Entity\Attribute
             groups: [get, set]
         item:
             access_type: public_method
             expose: true
-            #type: int
+            type: ArrayCollection<AppBundle\Entity\Item>
             groups: [get, set]
         value:
             access_type: public_method
