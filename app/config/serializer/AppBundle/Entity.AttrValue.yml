@@ -12,7 +12,10 @@ AppBundle\Entity\AttrValue:
         item:
             access_type: public_method
             expose: true
-            type: ArrayCollection<AppBundle\Entity\Item>
+            type: AppBundle\Entity\Item
+            accessor:
+                getter: getItem
+                setter: setItem
             groups: [get, set]
         value:
             access_type: public_method

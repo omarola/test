@@ -58,7 +58,7 @@ class ItemController extends Controller
         return new View($item,Response::HTTP_OK);
     }
 
-    public function updateItemAction($id, Request $request)
+    public function updateItemAction(Request $request, $id)
     {
         $serializer = $this->get('jms_serializer');
 
@@ -67,8 +67,8 @@ class ItemController extends Controller
         $item = $serializer->deserialize($content,Item::class,'json');
 
         $em = $this->getDoctrine()->getManager();
-        $em->getRepository(Item::class)->findOneById($item);
-        //$em->persist($item);
+        $em->getRepository(Item::class)->find($id);
+        $em->merge($item);
         $em->flush();
         return new View("updated!",Response::HTTP_OK);
     }

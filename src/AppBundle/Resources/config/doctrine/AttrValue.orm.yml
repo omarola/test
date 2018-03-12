@@ -4,15 +4,15 @@ AppBundle\Entity\AttrValue:
         item:
             targetEntity: AppBundle\Entity\Item
             inversedBy: attributes
-            cascade: ['persist','remove']
+            cascade: ['persist','remove','merge']
             joinColumn:
                 name: item_id
                 referencedColumn: id
-                nullable: false
+                nullable: true
         attribute:
             targetEntity: AppBundle\Entity\Attribute
             inversedBy: attrValues
-            cascade: ['persist','remove']
+            cascade: ['persist','remove','merge']
             joinColumn:
                 name: attribute_id
                 referencedColumn: id

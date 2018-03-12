@@ -3,7 +3,7 @@ AppBundle\Entity\Item:
     manyToMany:
         categories:
             targetEntity: AppBundle\Entity\Category
-            cascade: ['persist']
+            cascade: ['persist','remove','merge']
             inversedBy: items
             joinTable:
                 name: item_category
@@ -17,7 +17,7 @@ AppBundle\Entity\Item:
         attributes:
             targetEntity: AppBundle\Entity\AttrValue
             mappedBy: item
-            cascade: ['persist','remove']
+            cascade: ['persist','remove','merge']
     table: items
     repositoryClass: AppBundle\Repository\ItemRepository
     id:

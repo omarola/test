@@ -38,7 +38,7 @@ class AttrValue
     /**
      * @param mixed $item
      */
-    public function setItem($item)
+    public function setItem(Item $item)
     {
         $this->item = $item;
     }
