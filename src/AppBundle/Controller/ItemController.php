@@ -45,11 +45,9 @@ class ItemController extends Controller
      */
     public function postItemAction(Request $request)
     {
-        $serializer = $this->get('jms_serializer');
-
         $content = $request->getContent();
 
-        $item = $serializer->deserialize($content,Item::class,'json');
+        $item = $this->deserialize($content);
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($item);
@@ -65,7 +63,6 @@ class ItemController extends Controller
     public function updateItemAction(Request $request)
     {
         $content = $request->getContent();
-
         $item = $this->deserialize($content);
         $em = $this->getDoctrine()->getManager();
         $em->getRepository(Item::class)->findById($item);

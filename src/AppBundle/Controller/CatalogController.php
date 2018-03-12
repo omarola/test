@@ -49,11 +49,9 @@ class CatalogController extends Controller
      */
     public function postCategoryAction(Request $request)
     {
-        $serializer = $this->get('jms_serializer');
-
         $content = $request->getContent();
 
-        $category = $serializer->deserialize($content,Category::class,'json');
+        $category = $this->deserialize($content);
 
         $errors = $this->get('validator')->validate($category);
 
