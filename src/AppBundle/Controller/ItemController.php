@@ -58,19 +58,21 @@ class ItemController extends Controller
         return new View($item,Response::HTTP_OK);
     }
 
-    public function updateItemAction(Request $request, $id)
+    /**
+     * @param Request $request
+     * @return View
+     */
+    public function updateItemAction(Request $request)
     {
-        $serializer = $this->get('jms_serializer');
-
         $content = $request->getContent();
 
-        $item = $serializer->deserialize($content,Item::class,'json');
-
+        $item = $this->deserialize($content);
         $em = $this->getDoctrine()->getManager();
-        $em->getRepository(Item::class)->find($id);
+        $em->getRepository(Item::class)->findById($item);
         $em->merge($item);
         $em->flush();
-        return new View("updated!",Response::HTTP_OK);
+
+        return new View($item,Response::HTTP_OK);
     }
 
     /**
@@ -90,5 +92,18 @@ class ItemController extends Controller
         $em->flush();
 
         return new View("Item deleted successfully", Response::HTTP_OK);
+    }
+
+    /**
+     * @param $data
+     * @return array|\JMS\Serializer\scalar|mixed|object
+     */
+    private function deserialize($data)
+    {
+        $serializer = $this->get('jms_serializer');
+
+        $result = $serializer->deserialize($data,Item::class,'json');
+
+        return $result;
     }
 }

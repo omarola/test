@@ -11,7 +11,7 @@ postCategory:
     methods: [POST]
     defaults:  { _controller: AppBundle:Catalog:postCategory}
 updateCategory:
-    path: /category/{id}
+    path: /category
     methods: [PATCH]
     defaults: { _controller: AppBundle:Catalog:updateCategory}
 deleteCategory:
@@ -32,7 +32,7 @@ postItem:
     methods: [POST]
     defaults: { _controller: AppBundle:Item:postItem}
 updateItem:
-    path: /item/{id}
+    path: /item
     methods: [PATCH]
     defaults: { _controller: AppBundle:Item:updateItem}
 deleteItem:

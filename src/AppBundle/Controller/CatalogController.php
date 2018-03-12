@@ -68,18 +68,23 @@ class CatalogController extends Controller
         return new View($category, Response::HTTP_OK);
     }
 
+    /**
+     * @param $id
+     * @param Request $request
+     * @return View
+     */
     public function updateCategoryAction($id,Request $request)
     {
-        $serializer = $this->get('jms_serializer');
-
         $content = $request->getContent();
 
-        $category = $serializer->deserialize($content,Category::class,'json');
+        $category= $this->deserialize($content);
 
-        $result = $this->getDoctrine()->getRepository(Category::class)->find($id);
+        $em = $this->getDoctrine()->getManager();
+        $em->getRepository(Category::class)->findById($category);
+        $em->merge($category);
+        $em->flush();
 
         return new View("updated!",Response::HTTP_OK);
-
     }
 
     /**
@@ -99,5 +104,18 @@ class CatalogController extends Controller
         $em->flush();
 
         return new View("deleted successfully", Response::HTTP_OK);
+    }
+
+    /**
+     * @param $data
+     * @return array|\JMS\Serializer\scalar|mixed|object
+     */
+    private function deserialize($data)
+    {
+        $serializer = $this->get('jms_serializer');
+
+        $result = $serializer->deserialize($data,Category::class,'json');
+
+       return $result;
     }
 }
