@@ -8,7 +8,7 @@ AppBundle\Entity\AttrValue:
             joinColumn:
                 name: item_id
                 referencedColumn: id
-                nullable: true
+                nullable: false
         attribute:
             targetEntity: AppBundle\Entity\Attribute
             inversedBy: attrValues

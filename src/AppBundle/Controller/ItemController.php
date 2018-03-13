@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\AttrValue;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use AppBundle\Entity\Item;
 use Symfony\Component\HttpFoundation\Request;
@@ -47,7 +48,9 @@ class ItemController extends Controller
     {
         $content = $request->getContent();
 
-        $item = $this->deserialize($content);
+        $serializer = $this->get('jms_serializer');
+
+        $item = $serializer->deserialize($content,AttrValue::class,'json');
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($item);
