@@ -2,17 +2,23 @@ AppBundle\Entity\Category:
     exclusion_policy: ALL
     properties:
         id:
-          type: integer
-          groups: [get]
+            type: integer
+            groups: [get]
         name:
-          access_type: public_method
-          expose: true
-          type: string
-          groups: [get, set]
+            access_type: public_method
+            expose: true
+            type: string
+            groups: [get, set]
         parent:
             type: AppBundle\Entity\Category
             access_type: public_method
             groups: [get, set]
         children:
-          expose: false
-          groups: [get]
+            expose: false
+            groups: [get]
+        createdAt:
+            type: datetime
+            expose: false
+        updatedAt:
+            type: datedime
+            expose: false

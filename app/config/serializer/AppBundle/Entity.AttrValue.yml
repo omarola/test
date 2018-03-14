@@ -13,9 +13,6 @@ AppBundle\Entity\AttrValue:
             access_type: public_method
             expose: true
             type: AppBundle\Entity\Item
-            accessor:
-                getter: getItem
-                setter: setItem
             groups: [get, set]
         value:
             access_type: public_method

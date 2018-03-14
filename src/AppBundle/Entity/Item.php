@@ -5,6 +5,11 @@ namespace AppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
+
+/**
+ * Class Item
+ * @package AppBundle\Entity
+ */
 class Item
 {
     /**
@@ -23,9 +28,22 @@ class Item
     protected $categories;
 
     /**
-     * @var
+     * @var Collection of Attributes
      */
     protected $attributes;
+
+    /**
+     * @var \DateTime $createdAt
+     */
+    private $createdAt;
+
+    /**
+     * @var \DateTime $updatedAt
+     */
+    private $updatedAt;
+
+
+
     /**
      * Item constructor.
      */
@@ -98,6 +116,22 @@ class Item
     public function setAttributes(Collection $attributes)
     {
         $this->attributes = $attributes;
+    }
+
+    /**
+     * Add Date of creation
+     */
+    public function setCreatedAt()
+    {
+        $this->createdAt = new \DateTime();
+    }
+
+    /**
+     * Add Date of update
+     */
+    public function setUpdatedAt()
+    {
+        $this->updatedAt = new \DateTime();
     }
 
 }

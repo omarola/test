@@ -32,6 +32,16 @@ class Category
     protected $items;
 
     /**
+     * @var \DateTime $createdAt
+     */
+    private $createdAt;
+
+    /**
+     * @var \DateTime $updatedAt
+     */
+    private $updatedAt;
+
+    /**
      * Category constructor.
      */
     public function __construct()
@@ -104,5 +114,20 @@ class Category
         $this->name = $name;
     }
 
+    /**
+     * Add Date of creation
+     */
+    public function setCreatedAt()
+    {
+        $this->createdAt = new \DateTime();
+    }
+
+    /**
+     * Add Date of update
+     */
+    public function setUpdatedAt()
+    {
+        $this->updatedAt = new \DateTime();
+    }
 }
 

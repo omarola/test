@@ -18,3 +18,9 @@ AppBundle\Entity\Item:
             type: ArrayCollection<AppBundle\Entity\AttrValue>
             expose: true
             groups: [getItem, setItem]
+        createdAt:
+            type: datetime
+            expose: false
+        updatedAt:
+            type: datedime
+            expose: false

@@ -1,5 +1,8 @@
 AppBundle\Entity\Category:
   type: entity
+  lifecycleCallbacks:
+        prePersist: [setCreatedAt]
+        preUpdate: [setUpdatedAt]
   oneToMany:
         children:
             targetEntity: AppBundle\Entity\Category
@@ -31,5 +34,11 @@ AppBundle\Entity\Category:
       name:
           type: string
           lenght: 255
+      createdAt:
+          type: datetime
+          nullable: true
+      updatedAt:
+          type: datetime
+          nullable: true
 
 

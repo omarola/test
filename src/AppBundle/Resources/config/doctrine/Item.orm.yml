@@ -1,5 +1,9 @@
 AppBundle\Entity\Item:
     type: entity
+    auditable: true
+    lifecycleCallbacks:
+            prePersist: [setCreatedAt]
+            preUpdate: [setUpdatedAt]
     manyToMany:
         categories:
             targetEntity: AppBundle\Entity\Category
@@ -30,5 +34,11 @@ AppBundle\Entity\Item:
         name:
             type: string
             length: 255
+        createdAt:
+            type: datetime
+            nullable: true
+        updatedAt:
+            type: datetime
+            nullable: true
 
 
