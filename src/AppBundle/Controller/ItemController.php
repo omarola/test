@@ -66,7 +66,9 @@ class ItemController extends Controller
     public function updateItemAction(Request $request)
     {
         $content = $request->getContent();
+
         $item = $this->deserialize($content);
+
         $em = $this->getDoctrine()->getManager();
         $em->getRepository(Item::class)->findById($item);
         $em->merge($item);

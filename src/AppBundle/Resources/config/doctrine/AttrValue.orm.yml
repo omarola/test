@@ -1,22 +1,5 @@
 AppBundle\Entity\AttrValue:
     type: entity
-    manyToOne:
-        item:
-            targetEntity: AppBundle\Entity\Item
-            inversedBy: attributes
-            cascade: ['persist','remove','merge']
-            joinColumn:
-                name: item_id
-                referencedColumn: id
-                nullable: false
-        attribute:
-            targetEntity: AppBundle\Entity\Attribute
-            inversedBy: attrValues
-            cascade: ['persist','remove','merge']
-            joinColumn:
-                name: attribute_id
-                referencedColumn: id
-                nullable: false
     table: attr_value
     repositoryClass: AppBundle\Repository\AttrValueRepository
     id:
@@ -29,3 +12,20 @@ AppBundle\Entity\AttrValue:
         value:
             type: string
             length: 255
+
+    manyToOne:
+        item:
+            targetEntity: AppBundle\Entity\Item
+            inversedBy: attributes
+            cascade: ['persist','remove','merge']
+            joinColumn:
+                name: item_id
+                referencedColumn: id
+                nullable: false
+        attribute:
+            targetEntity: AppBundle\Entity\Attribute
+            cascade: ['persist','remove','merge']
+            joinColumn:
+                name: attribute_id
+                referencedColumn: id
+                nullable: false

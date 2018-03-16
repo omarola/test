@@ -1,27 +1,5 @@
 AppBundle\Entity\Item:
     type: entity
-    auditable: true
-    lifecycleCallbacks:
-            prePersist: [setCreatedAt]
-            preUpdate: [setUpdatedAt]
-    manyToMany:
-        categories:
-            targetEntity: AppBundle\Entity\Category
-            cascade: ['persist','remove','merge']
-            inversedBy: items
-            joinTable:
-                name: item_category
-                joinColumns:
-                    item_id:
-                        referencedColumnName: id
-                inverseJoinColumns:
-                    category_id:
-                        referencedColumnName: id
-    oneToMany:
-        attributes:
-            targetEntity: AppBundle\Entity\AttrValue
-            mappedBy: item
-            cascade: ['persist','remove','merge']
     table: items
     repositoryClass: AppBundle\Repository\ItemRepository
     id:
@@ -40,5 +18,27 @@ AppBundle\Entity\Item:
         updatedAt:
             type: datetime
             nullable: true
+
+    manyToMany:
+        categories:
+            targetEntity: AppBundle\Entity\Category
+            cascade: ['persist','remove','merge']
+            inversedBy: items
+            joinTable:
+                name: item_category
+                joinColumns:
+                    item_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    category_id:
+                        referencedColumnName: id
+    oneToMany:
+        attributes:
+            targetEntity: AppBundle\Entity\AttrValue
+            mappedBy: item
+            cascade: ['persist','remove','merge']
+    lifecycleCallbacks:
+            prePersist: [setCreatedAt]
+            preUpdate: [setUpdatedAt]
 
 

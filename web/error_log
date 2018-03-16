@@ -46,3 +46,435 @@ Stack trace:
 #1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
 #2 {main}
   thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:22:02 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:22:05 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:24:10 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:27:07 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:27:09 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:27:45 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:34:25 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:34:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:34:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:34:29 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:41:22 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:41:22 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 05:41:24 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:07:05 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:07:09 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:07:11 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:09:08 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:16:16 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:18:03 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('prod', false)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:18:04 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('prod', false)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:18:05 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('prod', false)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:18:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('prod', false)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:20:12 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:20:13 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:20:14 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:20:16 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:20:37 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:20:40 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:20:42 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:20:42 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:26:10 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:26:11 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:26:11 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:26:11 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:26:12 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:26:12 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:26:13 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:26:13 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:26:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:26:44 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:31:04 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:31:05 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:31:06 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:31:07 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:31:07 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:31:08 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:31:09 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:31:10 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:31:25 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:32:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:32:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:32:32 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:34:59 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:37:21 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:37:22 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:37:22 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:37:23 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:37:24 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:49:44 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:50:02 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:50:03 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:50:04 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:50:40 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:51:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:52:14 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:52:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:54:14 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:54:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 06:58:25 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 07:01:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 07:08:35 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317
+[14-Mar-2018 07:08:36 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\HttpKernel\ctype_digit() in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:317
+Stack trace:
+#0 /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(89): Symfony\Component\HttpKernel\Kernel->getName()
+#1 /vagrant/catalog/web/app.php(9): Symfony\Component\HttpKernel\Kernel->__construct('dev', true)
+#2 {main}
+  thrown in /vagrant/catalog/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 317

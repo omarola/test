@@ -19,29 +19,9 @@ class Attribute
 
     /**
      * @var string
+     * !!!!!!!!!!!!!!!!!mti sti doctrine---------------------------------------------
      */
     private $name;
-
-    /**
-     * @var
-     */
-    protected $attrValues;
-
-    /**
-     * @return mixed
-     */
-    public function getAttrValues()
-    {
-        return $this->attrValues;
-    }
-
-    /**
-     * @param mixed $attrValues
-     */
-    public function setAttrValues($attrValues)
-    {
-        $this->attrValues = $attrValues;
-    }
 
     /**
      * Get id

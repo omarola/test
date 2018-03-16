@@ -1,10 +1,5 @@
 AppBundle\Entity\Attribute:
     type: entity
-    oneToMany:
-            attrValues:
-                targetEntity: AppBundle\Entity\AttrValue
-                mappedBy: attribute
-                cascade: ['persist','remove','merge']
     table: attribute
     repositoryClass: AppBundle\Repository\AttributeRepository
     id:
