@@ -36,7 +36,7 @@ AppBundle\Entity\Category:
         items:
             targetEntity: AppBundle\Entity\Item
             mappedBy: categories
-            cascade: ['persist','merge']
+            cascade: ['persist','merge','remove']
     lifecycleCallbacks:
         prePersist: [setCreatedAt]
         preUpdate: [setUpdatedAt]

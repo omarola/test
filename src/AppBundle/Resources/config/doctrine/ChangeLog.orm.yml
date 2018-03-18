@@ -1,0 +1,30 @@
+AppBundle\Entity\ChangeLog:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ChangeLogRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        date:
+            type: datetime
+        user:
+            type: string
+            length: 255
+        entityName:
+            type: string
+            length: 255
+        entityId:
+            type: integer
+        action:
+            type: string
+            length: 255
+        changeSet:
+            type: array
+        description:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

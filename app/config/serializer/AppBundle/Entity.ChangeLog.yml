@@ -1,0 +1,28 @@
+AppBundle\Entity\Category:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: integer
+        date:
+            access_type: public_method
+            expose: true
+            type: int
+        user:
+            type: AppBundle\Entity\Category
+            access_type: public_method
+            type: string
+        entityName:
+            expose: true
+            type: string
+        entityId:
+            type: int
+            expose: true
+        action:
+            type: string
+            expose: true
+        changeSet:
+            #type:
+            expose: true
+        description:
+            type: string
+            expose: true
