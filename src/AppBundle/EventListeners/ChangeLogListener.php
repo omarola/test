@@ -33,7 +33,7 @@ class ChangeLogListener implements EventSubscriber
 
     /**
      * @param LifecycleEventArgs $args
-     * This method will called on Doctrine postPersist event
+     * @throws \Doctrine\ORM\OptimisticLockException
      */
     public function postPersist(LifecycleEventArgs $args)
     {
@@ -42,9 +42,10 @@ class ChangeLogListener implements EventSubscriber
             $this->createLog($args, 'creation');
     }
 
+
     /**
      * @param LifecycleEventArgs $args
-     * This method will called on Doctrine postUpdate event
+     * @throws \Doctrine\ORM\OptimisticLockException
      */
     public function postUpdate(LifecycleEventArgs $args)
     {
@@ -52,9 +53,10 @@ class ChangeLogListener implements EventSubscriber
         $this->createLog($args, 'update');
     }
 
+
     /**
      * @param LifecycleEventArgs $args
-     * This method will called on Doctrine onDelete event
+     * @throws \Doctrine\ORM\OptimisticLockException
      */
     public function preRemove(LifecycleEventArgs $args)
     {
