@@ -87,16 +87,8 @@ class ChangeLogListener implements EventSubscriber
         $cl->setEntityName(get_class($entity));
         $cl->setEntityId($entity->getId());
         $cl->setAction($action);
-
-        /*$separator='';
-        $log = '';
-
-        foreach ($changes as $field => $values) {
-            $log.= "{$separator} {$field} changed from {$values[0]} to {$values[1]}";
-            $separator=", ";
-        }*/
+        $cl->setDescription('0 - old value, 1 - new value');
         $cl->setChangeset($changes);
-        $cl->setDescription('');
 
         $em->persist($cl);
         $em->flush();

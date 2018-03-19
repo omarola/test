@@ -39,7 +39,7 @@ class ChangeLog
     private $action;
 
     /**
-     * @var string
+     * @var array
      */
     private $changeSet;
 

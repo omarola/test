@@ -1,4 +1,4 @@
-AppBundle\Entity\Category:
+AppBundle\Entity\ChangeLog:
     exclusion_policy: ALL
     properties:
         id:
@@ -6,23 +6,28 @@ AppBundle\Entity\Category:
         date:
             access_type: public_method
             expose: true
-            type: int
+            type: datetime
         user:
-            type: AppBundle\Entity\Category
             access_type: public_method
+            expose: true
             type: string
         entityName:
+            access_type: public_method
             expose: true
             type: string
         entityId:
+            access_type: public_method
             type: int
             expose: true
         action:
+            access_type: public_method
             type: string
             expose: true
         changeSet:
-            #type:
+            access_type: public_method
+            type: array
             expose: true
         description:
+            access_type: public_method
             type: string
             expose: true

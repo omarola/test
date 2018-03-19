@@ -39,3 +39,8 @@ deleteItem:
     path: /item/{id}
     methods: [DELETE]
     defaults: { _controller: AppBundle:Item:deleteItem}
+
+getLog:
+    path: /log
+    methods: [GET]
+    defaults: { _controller: AppBundle:Logging:getLog}
