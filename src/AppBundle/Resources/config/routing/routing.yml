@@ -1,46 +1,46 @@
 getAllCategory:
     path:      /category
     methods: [GET]
-    defaults:  { _controller: AppBundle:Catalog:getAllCategory}
+    defaults:  {_controller: AppBundle:Catalog:getAllCategory}
 getCategory:
     path:      /category/{id}
     methods: [GET]
-    defaults:  { _controller: AppBundle:Catalog:getCategory}
+    defaults:  {_controller: AppBundle:Catalog:getCategory}
 postCategory:
     path:      /category
     methods: [POST]
-    defaults:  { _controller: AppBundle:Catalog:postCategory}
+    defaults:  {_controller: AppBundle:Catalog:postCategory}
 updateCategory:
     path: /category
     methods: [PATCH]
-    defaults: { _controller: AppBundle:Catalog:updateCategory}
+    defaults: {_controller: AppBundle:Catalog:updateCategory}
 deleteCategory:
     path: /category/{id}
     methods: [DELETE]
-    defaults: { _controller: AppBundle:Catalog:deleteCategory}
+    defaults: {_controller: AppBundle:Catalog:deleteCategory}
 
 getAllItem:
     path: /items
     methods: [GET]
-    defaults: { _controller: AppBundle:Item:getAllItems}
+    defaults: {_controller: AppBundle:Item:getAllItems}
 getItem:
     path: /item/{id}
     methods: [GET]
-    defaults: { _controller: AppBundle:Item:getItem}
+    defaults: {_controller: AppBundle:Item:getItem}
 postItem:
     path: /item
     methods: [POST]
-    defaults: { _controller: AppBundle:Item:postItem}
+    defaults: {_controller: AppBundle:Item:postItem}
 updateItem:
     path: /item
     methods: [PATCH]
-    defaults: { _controller: AppBundle:Item:updateItem}
+    defaults: {_controller: AppBundle:Item:updateItem}
 deleteItem:
     path: /item/{id}
     methods: [DELETE]
-    defaults: { _controller: AppBundle:Item:deleteItem}
+    defaults: {_controller: AppBundle:Item:deleteItem}
 
 getLog:
     path: /log
     methods: [GET]
-    defaults: { _controller: AppBundle:Logging:getLog}
+    defaults: {_controller: AppBundle:Logging:getLog}

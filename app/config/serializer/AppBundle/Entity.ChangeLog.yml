@@ -6,7 +6,7 @@ AppBundle\Entity\ChangeLog:
         date:
             access_type: public_method
             expose: true
-            type: datetime
+            type: string
         user:
             access_type: public_method
             expose: true

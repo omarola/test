@@ -10,7 +10,7 @@ AppBundle\Entity\ChangeLog:
                 strategy: AUTO
     fields:
         date:
-            type: datetime
+            type: string
         user:
             type: string
             length: 255

@@ -72,7 +72,8 @@ class ChangeLog
      */
     public function setDate($date)
     {
-        $this->date = $date;
+        $format = $date->format('Y-m-d H:i:s');
+        $this->date = $format;
 
         return $this;
     }
