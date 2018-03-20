@@ -22,7 +22,7 @@ class ItemController extends Controller
             return new View("Items not found", Response::HTTP_NOT_FOUND);
         }
 
-        return new View($content,Response::HTTP_OK);
+        return new View($content, Response::HTTP_OK);
     }
 
     /**
@@ -37,7 +37,7 @@ class ItemController extends Controller
             return new View("ID: {$id} not found. This item does not exist", Response::HTTP_NOT_FOUND);
         }
 
-        return new View($content,Response::HTTP_OK);
+        return new View($content, Response::HTTP_OK);
     }
 
     /**
@@ -50,31 +50,29 @@ class ItemController extends Controller
 
         $serializer = $this->get('jms_serializer');
 
-        $item = $serializer->deserialize($content,AttrValue::class,'json');
+        $item = $serializer->deserialize($content, AttrValue::class, 'json');
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($item);
         $em->flush();
 
-        return new View($item,Response::HTTP_OK);
+        return new View($item, Response::HTTP_OK);
     }
 
     /**
      * @param Request $request
      * @return View
      */
-    public function updateItemAction(Request $request)
+    public function updateItemAction(Request $request, $id)
     {
         $content = $request->getContent();
 
         $item = $this->deserialize($content);
 
         $em = $this->getDoctrine()->getManager();
-        $em->getRepository(Item::class)->findById($item);
-        $em->merge($item);
+        $em->getRepository(Item::class)->find($id);
         $em->flush();
-
-        return new View($item,Response::HTTP_OK);
+        return new View($item, Response::HTTP_OK);
     }
 
     /**
@@ -104,7 +102,7 @@ class ItemController extends Controller
     {
         $serializer = $this->get('jms_serializer');
 
-        $result = $serializer->deserialize($data,Item::class,'json');
+        $result = $serializer->deserialize($data, Item::class, 'json');
 
         return $result;
     }

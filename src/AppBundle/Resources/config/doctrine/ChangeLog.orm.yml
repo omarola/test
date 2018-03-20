@@ -22,9 +22,12 @@ AppBundle\Entity\ChangeLog:
         action:
             type: string
             length: 255
-        changeSet:
-            type: array
-        description:
+        fieldName:
             type: string
-            length: 255
+        oldValue:
+            type: string
+            nullable: true
+        newValue:
+            type: string
+            nullable: true
     lifecycleCallbacks: {  }

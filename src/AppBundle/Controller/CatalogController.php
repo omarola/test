@@ -24,7 +24,7 @@ class CatalogController extends Controller
             return new View("Catalog not found", Response::HTTP_NOT_FOUND);
         }
 
-        return new View($result,Response::HTTP_OK);
+        return new View($result, Response::HTTP_OK);
     }
 
     /**
@@ -56,7 +56,7 @@ class CatalogController extends Controller
         $errors = $this->get('validator')->validate($category);
 
         if (count($errors) > 0) {
-            return new View($errors,Response::HTTP_NO_CONTENT);
+            return new View($errors, Response::HTTP_NO_CONTENT);
         }
 
         $em = $this->getDoctrine()->getManager();
@@ -71,18 +71,18 @@ class CatalogController extends Controller
      * @param Request $request
      * @return View
      */
-    public function updateCategoryAction($id,Request $request)
+    public function updateCategoryAction($id, Request $request)
     {
         $content = $request->getContent();
 
-        $category= $this->deserialize($content);
+        $category = $this->deserialize($content);
 
         $em = $this->getDoctrine()->getManager();
         $em->getRepository(Category::class)->findById($category);
         $em->merge($category);
         $em->flush();
 
-        return new View("updated!",Response::HTTP_OK);
+        return new View("updated!", Response::HTTP_OK);
     }
 
     /**
@@ -112,8 +112,8 @@ class CatalogController extends Controller
     {
         $serializer = $this->get('jms_serializer');
 
-        $result = $serializer->deserialize($data,Category::class,'json');
+        $result = $serializer->deserialize($data, Category::class, 'json');
 
-       return $result;
+        return $result;
     }
 }

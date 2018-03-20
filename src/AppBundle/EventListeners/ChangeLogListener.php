@@ -2,6 +2,8 @@
 
 namespace AppBundle\EventListeners;
 
+use AppBundle\Entity\AttrValue;
+use AppBundle\Entity\Item;
 use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use AppBundle\Entity\ChangeLog;
@@ -14,13 +16,17 @@ class ChangeLogListener implements EventSubscriber
      */
     private $tokenStorage;
 
+    /**
+     * ChangeLogListener constructor.
+     * @param TokenStorage $tokenStorage
+     */
     public function __construct(TokenStorage $tokenStorage)
     {
         $this->tokenStorage = $tokenStorage;
     }
 
     /**
-     * @return array
+     * {@inheritdoc}
      */
     public function getSubscribedEvents()
     {
@@ -37,11 +43,10 @@ class ChangeLogListener implements EventSubscriber
      */
     public function postPersist(LifecycleEventArgs $args)
     {
-        if (!$args->getEntity() instanceof ChangeLog)
-
+        if ($args->getEntity() instanceof AttrValue) {
             $this->createLog($args, 'creation');
+        }
     }
-
 
     /**
      * @param LifecycleEventArgs $args
@@ -49,8 +54,9 @@ class ChangeLogListener implements EventSubscriber
      */
     public function postUpdate(LifecycleEventArgs $args)
     {
-
-        $this->createLog($args, 'update');
+        if ($args->getEntity() instanceof AttrValue) {
+            $this->createLog($args, 'update');
+        }
     }
 
 
@@ -60,7 +66,9 @@ class ChangeLogListener implements EventSubscriber
      */
     public function preRemove(LifecycleEventArgs $args)
     {
-        $this->createLog($args, 'remove');
+        if ($args->getEntity() instanceof AttrValue) {
+            $this->createLog($args, 'remove');
+        }
     }
 
     /**
@@ -79,18 +87,44 @@ class ChangeLogListener implements EventSubscriber
         $user = $this->tokenStorage->getToken()->getUser();
 
         #Get changes
-        $changes = $uow->getEntityChangeSet($entity);
+        $data = $uow->getEntityChangeSet($entity);
 
-        $cl = new ChangeLog();
-        $cl->setDate(new \DateTime());
-        $cl->setUser($user);
-        $cl->setEntityName(get_class($entity));
-        $cl->setEntityId($entity->getId());
-        $cl->setAction($action);
-        $cl->setDescription('0 - old value, 1 - new value');
-        $cl->setChangeset($changes);
+        //$changes = $this->parseData($data);
+        foreach ($data as $field => $value) {
 
-        $em->persist($cl);
-        $em->flush();
+            $oldValue = $value[0];
+            $newValue = $value[1];
+
+            /*if ($value[0] instanceof \DateTime)
+                $oldValue = $value[0]->format('Y-m-d H:i:s');
+            if ($value[1] instanceof \DateTime)
+                $newValue = $value[1]->format('Y-m-d H:i:s');
+            if ($value[0] instanceof Item)
+                $oldValue = $value[0]->getName();
+            if ($value[1] instanceof Item)
+                $newValue = $value[1]->getName();
+            if ($value[0] instanceof Attribute)
+                $oldValue = $value[0]->getName();
+            if ($value[1] instanceof Attribute)
+                $newValue = $value[1]->getName();*/
+
+            if ($value[0] instanceof Item || $value[1] instanceof Item) {
+                return;
+            }
+
+            $cl = new ChangeLog();
+            $cl->setDate(new \DateTime());
+            $cl->setUser($user);
+            $cl->setEntityName(get_class($entity));
+            $cl->setEntityId($entity->getId());
+            $cl->setAction($action);
+            $cl->setFieldName($field);
+            $cl->setOldValue($oldValue);
+            $cl->setNewValue($newValue);
+
+            $em->persist($cl);
+            $em->flush();
+        }
     }
 }
+

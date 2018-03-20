@@ -32,7 +32,7 @@ postItem:
     methods: [POST]
     defaults: {_controller: AppBundle:Item:postItem}
 updateItem:
-    path: /item
+    path: /item/{id}
     methods: [PATCH]
     defaults: {_controller: AppBundle:Item:updateItem}
 deleteItem:

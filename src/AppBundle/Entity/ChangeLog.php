@@ -1,7 +1,6 @@
 <?php
 
 namespace AppBundle\Entity;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * ChangeLog
@@ -39,19 +38,19 @@ class ChangeLog
     private $action;
 
     /**
-     * @var array
+     * @var string
      */
-    private $changeSet;
+    private $fieldName;
 
     /**
      * @var string
      */
-    private $description;
+    private $oldValue;
 
-    public function __construct()
-    {
-        $this->changeSet = new ArrayCollection();
-    }
+    /**
+     * @var string
+     */
+    private $newValue;
 
     /**
      * Get id
@@ -185,51 +184,52 @@ class ChangeLog
     }
 
     /**
-     * Set changeSet
-     *
-     * @param array $changeSet
-     *
-     * @return ChangeLog
-     */
-    public function setChangeSet($changeSet)
-    {
-        $this->changeSet = $changeSet;
-
-        return $this;
-    }
-
-    /**
-     * Get changeSet
-     *
-     * @return array
-     */
-    public function getChangeSet()
-    {
-        return $this->changeSet;
-    }
-
-    /**
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return ChangeLog
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
      * @return string
      */
-    public function getDescription()
+    public function getFieldName()
     {
-        return $this->description;
+        return $this->fieldName;
     }
+
+    /**
+     * @param string $fieldName
+     */
+    public function setFieldName($fieldName)
+    {
+        $this->fieldName = $fieldName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOldValue()
+    {
+        return $this->oldValue;
+    }
+
+    /**
+     * @param string $oldValue
+     */
+    public function setOldValue($oldValue)
+    {
+        $this->oldValue = $oldValue;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNewValue()
+    {
+        return $this->newValue;
+    }
+
+    /**
+     * @param string $newValue
+     */
+    public function setNewValue($newValue)
+    {
+        $this->newValue = $newValue;
+    }
+
 }
 

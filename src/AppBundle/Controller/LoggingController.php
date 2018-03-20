@@ -17,6 +17,6 @@ class LoggingController extends Controller
             return new View("Log not found", Response::HTTP_NOT_FOUND);
         }
 
-        return new View($content,Response::HTTP_OK);
+        return new View($content, Response::HTTP_OK);
     }
 }

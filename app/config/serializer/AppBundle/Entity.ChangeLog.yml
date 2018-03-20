@@ -23,11 +23,15 @@ AppBundle\Entity\ChangeLog:
             access_type: public_method
             type: string
             expose: true
-        changeSet:
+        fieldName:
             access_type: public_method
-            type: array
+            type: string
             expose: true
-        description:
+        oldValue:
+            access_type: public_method
+            type: string
+            expose: true
+        newValue:
             access_type: public_method
             type: string
             expose: true

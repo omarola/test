@@ -123,7 +123,7 @@ class Item
      */
     public function setCreatedAt()
     {
-        $this->createdAt = new \DateTime();
+        $this->createdAt = new \DateTime('now');
     }
 
     /**
@@ -131,7 +131,7 @@ class Item
      */
     public function setUpdatedAt()
     {
-        $this->updatedAt = new \DateTime();
+        $this->updatedAt = new \DateTime('now');
     }
 
 }
