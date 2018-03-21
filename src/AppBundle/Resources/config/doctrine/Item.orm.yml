@@ -37,6 +37,7 @@ AppBundle\Entity\Item:
             targetEntity: AppBundle\Entity\AttrValue
             mappedBy: item
             cascade: ['persist','remove','merge']
+
     lifecycleCallbacks:
             prePersist: [setCreatedAt]
             preUpdate: [setUpdatedAt]

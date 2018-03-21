@@ -3,7 +3,8 @@
 namespace AppBundle\Entity;
 
 /**
- * AttrValue
+ * Class AttrValue
+ * @package AppBundle\Entity
  */
 class AttrValue
 {
@@ -18,12 +19,12 @@ class AttrValue
     private $value;
 
     /**
-     * @var
+     * Relation to Attribute Entity
      */
     protected $attribute;
 
     /**
-     * @var
+     * Relation to Item Entity
      */
     protected $item;
 

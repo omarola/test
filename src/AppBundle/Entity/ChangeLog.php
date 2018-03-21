@@ -3,7 +3,8 @@
 namespace AppBundle\Entity;
 
 /**
- * ChangeLog
+ * Class ChangeLog
+ * @package AppBundle\Entity
  */
 class ChangeLog
 {

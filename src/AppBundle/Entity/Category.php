@@ -5,6 +5,10 @@ namespace AppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
+/**
+ * Class Category
+ * @package AppBundle\Entity
+ */
 class Category
 {
     /**

@@ -2,8 +2,13 @@
 # https://symfony.com/doc/current/security.html
 security:
 
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
+
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
         in_memory:
             memory: ~
 
@@ -13,8 +18,12 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        main:
-            anonymous: ~
+        oauth_token:
+            pattern: ^/oauth/v2/token
+            security: false
+
+#        main:
+#            anonymous: ~
             # activate different ways to authenticate
 
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
@@ -22,3 +31,13 @@ security:
 
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
+        api:
+            pattern: ^/
+            fos_oauth: true
+            stateless: true
+            anonymous: true
+
+    access_control:
+        - { path: ^/items, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/category, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: IS_AUTHENTICATED_FULLY }

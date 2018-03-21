@@ -1,6 +1,6 @@
 AppBundle\Entity\ChangeLog:
     type: entity
-    table: null
+    table: change_log
     repositoryClass: AppBundle\Repository\ChangeLogRepository
     id:
         id:
@@ -30,4 +30,5 @@ AppBundle\Entity\ChangeLog:
         newValue:
             type: string
             nullable: true
+
     lifecycleCallbacks: {  }

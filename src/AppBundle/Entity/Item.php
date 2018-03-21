@@ -42,8 +42,6 @@ class Item
      */
     private $updatedAt;
 
-
-
     /**
      * Item constructor.
      */
@@ -132,6 +130,22 @@ class Item
     public function setUpdatedAt()
     {
         $this->updatedAt = new \DateTime('now');
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
     }
 
 }

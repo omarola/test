@@ -3,27 +3,38 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\ChangeLog;
+use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use FOS\RestBundle\View\View;
-use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
  * Class LoggingController
  * @package AppBundle\Controller
  */
-class LoggingController extends Controller
+class LoggingController extends FOSRestController
 {
     /**
-     * @return View
+     * @return Response
      */
     public function getLogAction()
     {
         $content = $this->getDoctrine()->getRepository(ChangeLog::class)->findAll();
         if ($content === NULL) {
-            return new View("Log not found", Response::HTTP_NOT_FOUND);
+            return new Response("Log not found", Response::HTTP_NOT_FOUND);
         }
 
-        return new View($content, Response::HTTP_OK);
+        return new Response ($this->serialize($content), Response::HTTP_OK);
+    }
+
+    /**
+     * @param $data
+     * @return mixed|string
+     */
+    private function serialize($data)
+    {
+        $serializer = $this->get('jms_serializer');
+
+        $result = $serializer->serialize($data, 'json');
+
+        return $result;
     }
 }

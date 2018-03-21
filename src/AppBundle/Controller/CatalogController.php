@@ -2,106 +2,103 @@
 
 namespace AppBundle\Controller;
 
+use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use AppBundle\Entity\Category;
-use FOS\RestBundle\View\View;
 
-class CatalogController extends Controller
+/**
+ * Class CatalogController
+ * @package AppBundle\Controller
+ */
+class CatalogController extends FOSRestController
 {
     /**
      * @param Request $request
-     * @return View
+     * @return Response
      */
     public function getAllCategoryAction(Request $request)
     {
-        $name = $request->query->get('name');
+        $content = $this->getDoctrine()->getRepository(Category::class)
+            ->findBy(array('name' => $request->query->get('name')));
 
-        $result = $this->getDoctrine()->getRepository(Category::class)->findBy(array('name' => $name));
-
-        if ($result === NULL) {
-            return new View("Catalog not found", Response::HTTP_NOT_FOUND);
+        if ($content === NULL) {
+            return new Response("Catalog not found", Response::HTTP_NOT_FOUND);
         }
 
-        return new View($result, Response::HTTP_OK);
+        return new Response($this->serialize($content), Response::HTTP_OK);
     }
 
     /**
      * @param $id
-     * @return View|object
+     * @return Response
      */
     public function getCategoryAction($id)
     {
-        $result = $this->getDoctrine()->getRepository(Category::class)->find($id);
+        $content = $this->getDoctrine()->getRepository(Category::class)->find($id);
 
-        if (!$result instanceof Category) {
+        if (!$content instanceof Category) {
 
-            return new View("ID: {$id} not found", Response::HTTP_NOT_FOUND);
+            return new Response("ID: {$id} not found", Response::HTTP_NOT_FOUND);
         }
 
-        return new View($result, Response::HTTP_OK);
+        return new Response($this->serialize($content), Response::HTTP_OK);
     }
 
     /**
      * @param Request $request
-     * @return View|Response
+     * @return Response
      */
     public function postCategoryAction(Request $request)
     {
-        $content = $request->getContent();
-
-        $category = $this->deserialize($content);
+        $category = $this->deserialize($request->getContent());
 
         $errors = $this->get('validator')->validate($category);
 
         if (count($errors) > 0) {
-            return new View($errors, Response::HTTP_NO_CONTENT);
+            return new Response($this->serialize($errors), Response::HTTP_NO_CONTENT);
         }
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($category);
         $em->flush();
 
-        return new View($category, Response::HTTP_OK);
+        return new Response($this->serialize($category), Response::HTTP_OK);
     }
 
     /**
-     * @param $id
      * @param Request $request
-     * @return View
+     * @return Response
      */
-    public function updateCategoryAction($id, Request $request)
+    public function updateCategoryAction(Request $request)
     {
-        $content = $request->getContent();
-
-        $category = $this->deserialize($content);
+        $category = $this->deserialize($request->getContent());
 
         $em = $this->getDoctrine()->getManager();
         $em->getRepository(Category::class)->findById($category);
         $em->merge($category);
         $em->flush();
 
-        return new View("updated!", Response::HTTP_OK);
+        return new Response("Updated!", Response::HTTP_OK);
     }
 
     /**
      * @param $id
-     * @return View
+     * @return Response
      */
     public function deleteCategoryAction($id)
     {
         $category = $this->getDoctrine()->getRepository(Category::class)->find($id);
 
         if (empty($category)) {
-            return new View("Category not found", Response::HTTP_NOT_FOUND);
+            return new Response("Category not found", Response::HTTP_NOT_FOUND);
         }
 
         $em = $this->getDoctrine()->getManager();
         $em->remove($category);
         $em->flush();
 
-        return new View("deleted successfully", Response::HTTP_OK);
+        return new Response("Deleted successfully", Response::HTTP_OK);
     }
 
     /**
@@ -113,6 +110,19 @@ class CatalogController extends Controller
         $serializer = $this->get('jms_serializer');
 
         $result = $serializer->deserialize($data, Category::class, 'json');
+
+        return $result;
+    }
+
+    /**
+     * @param $data
+     * @return mixed|string
+     */
+    private function serialize($data)
+    {
+        $serializer = $this->get('jms_serializer');
+
+        $result = $serializer->serialize($data, 'json');
 
         return $result;
     }

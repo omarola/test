@@ -3,7 +3,8 @@
 namespace AppBundle\Entity;
 
 /**
- * Attribute
+ * Class Attribute
+ * @package AppBundle\Entity
  */
 class Attribute
 {
