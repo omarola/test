@@ -84,7 +84,7 @@ class ChangeLogListener implements EventSubscriber
         $entity = $args->getEntity();
 
         # Get user
-        $user = $this->tokenStorage->getToken()->getUser();
+        //$user = $this->tokenStorage->getToken()->getUser();
 
         #Get changes
         $data = $uow->getEntityChangeSet($entity);
@@ -114,7 +114,7 @@ class ChangeLogListener implements EventSubscriber
 
             $cl = new ChangeLog();
             $cl->setDate(new \DateTime());
-            $cl->setUser($user);
+            $cl->setUser('user');
             $cl->setEntityName(get_class($entity));
             $cl->setEntityId($entity->getId());
             $cl->setAction($action);

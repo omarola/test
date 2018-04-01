@@ -10,8 +10,12 @@ namespace AppBundle\Repository;
  */
 class CategoryRepository extends \Doctrine\ORM\EntityRepository
 {
+    /**
+     * @param $name
+     * @return array
+     */
     public function findByName($name)
     {
-        return  $this->getEntityManager()->createQuery('SELECT * FROM AppBundle\\Entity\\Category WHERE name = "$name"')->getResult ();
+        return parent::findBy(array('name' => $name));
     }
 }
