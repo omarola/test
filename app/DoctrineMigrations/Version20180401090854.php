@@ -32,7 +32,7 @@ class Version20180401090854 extends ContainerAwareInterface
         for ($i = 0; $i < 10; $i++) {
             $name = 'test' . $i;
             $category = $em->getRepository(Category::class)->findByName($name);
-            if (isset($category) && $category == '') {
+            if ($category instanceof Category && is_null($category)) {
                 $category->setName('category' . $i);
                 $em->persist($category);
                 $em->flush();
